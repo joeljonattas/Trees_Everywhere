@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <h1 class="text-white p-4">Plantar Árvore</h1>
+    </div>
+
+    <div class="p-3">
+        <div class="card bg-dark w-50 border-0">
+            <div class="card-body bg-dark text-white">
+                    <form method="post" class="bg-dark">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary p-2">Plantar Árvore</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-4">
+        <a href="{%url 'user_trees'%}" class="btn btn-secondary ">Voltar para a tela principal</a>
+    </div>
+
+{% endblock %}

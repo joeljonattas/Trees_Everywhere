@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="p-4">
+        <div>
+            <h1 class="text-white">Detalhes da Árvore</h1>
+        </div>
+        <div class="card text-bg-dark order border-light-subtle w-50">
+            <div class="card-body">
+                <div class="mb-2">
+                    <label class="form-label text-white"><strong>Árvore:</strong></label>
+                    <input class="form-control" type="text" value="{{ tree.tree }}" disabled>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label text-white"><strong>Nome Científico:</strong></label>
+                    <input class="form-control" type="text" value="{{ tree.tree.scientific_name }}" disabled readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-4">
+        <a href="{%url 'user_trees'%}" class="btn btn-secondary ">Voltar para a tela principal</a>
+    </div>
+
+{% endblock %}
